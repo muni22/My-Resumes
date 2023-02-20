@@ -1,0 +1,443 @@
+/* Nav */
+
+.navigation {
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.navigation-list li {
+    position: relative;
+    white-space: nowrap;
+    padding: 0.4rem 1rem;
+}
+
+.navigation-list li i {
+    color: var(--main-nav-icon-color);
+}
+
+.navigation-list li.active i {
+    color: var(--main-link-color);
+}
+
+.navigation-list li.active a {
+    background-color: var(--main-item-color);
+}
+
+.navigation-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-link-color);
+    padding: 1rem;
+    border-radius: 5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--main-nav-color);
+    font-size: 1.2rem;
+    overflow: hidden;
+
+}
+
+.navigation-list li a:hover {
+    width: 100%;
+    animation: colorchange 0.5s ease both;
+    transition: .5s;
+    color: var(--main-link-color);
+}
+
+.navigation-list li a:hover i {
+    color: var(--main-link-color);
+}
+
+.navigation-list li a p {
+    display: none;
+}
+
+.navigation-list li a:hover p {
+    display: block;
+    margin-left: 1rem;
+} 
+
+.navigation-list li a i {
+    font-size: 1.2rem;
+}
+
+/* Home View */
+
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: var(--main-nav-icon-color);
+}
+
+.home-image {
+    background: url(/img/firstview.jpg) center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+    /* filter: brightness(0.8) blur(1px); */
+}
+.home-contents {
+    position: absolute;
+    top: 32%;
+    left: 12%;
+    text-shadow: 3px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.home-name {
+    font-family: "Nico Moji";
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    border: 0;
+}
+
+.home-texts {
+    font-size: 2.4rem;
+    padding: 1rem 0;
+}
+
+.home-typing {
+    text-align: center;
+    color: var(--main-item-color);
+}
+
+.home-wrap {
+    animation: blink 1s infinite;
+}
+
+.home-icon i {
+    padding: 1.2rem 1rem 0 0;
+    font-size: 2rem;
+}
+
+/* About */
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.about-item1 {
+    flex-basis: 30%;
+}
+
+.about-img {
+    width: 300px;
+    border-radius: 50%;
+    margin-bottom: 3rem;
+}
+
+.about-item2 {
+    flex-basis: 70%;
+}
+
+.about-name {
+    font-size: 2rem;
+    color: var(--main-item-color);
+    margin-bottom: 1rem;
+}
+
+.about-list {
+    padding: 0.4rem 0;
+}
+
+.about-list li {
+    letter-spacing: 1.6px;
+    line-height: 1.8rem;
+}
+
+.about-list li i{
+    color: var(--main-item-color);
+    margin-right: 5px;
+}
+
+/* Facts */
+
+.facts-item {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.facts-item i {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--main-item-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Resume */
+
+.resume-box {
+    padding: 1rem 0;
+}
+
+.resume-title {
+    padding-left: 1rem;
+    padding-bottom: 0.1rem;
+    position: relative;
+    border-left: 2px solid var(--main-item-color);
+}
+
+.resume-title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;left: -10px;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 2px solid var(--main-item-color);
+    border-radius: 50%;
+    background-color: var(--main-bg-color);
+    
+}
+
+.resume-name {
+    color: var(--main-item-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+
+.resume-time {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 0.3rem;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: var(--main-nav-color);
+}
+
+.resume-decs {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+    line-height: 1.8rem;
+}
+
+/* Portfolio */
+
+#portfolio-btns {
+    display: flex;
+    justify-content: center;
+}
+
+#portfolio-btns button {
+    margin: 0 2rem;
+    padding: 0.5rem 2rem;
+}
+
+#portfolio-btns button.btn-primary {
+    background-color: var(--main-nav-color);
+    border-color: var(--main-nav-color);
+    color: var(--main-text-color);
+}
+
+#portfolio-btns button.active { 
+    color: var(--main-link-color);    
+    background-color: var(--main-item-color);
+}
+
+.portfolio-thumbnails {
+    margin-top: 3rem;
+}
+
+.portfolio-thumbnails img {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+/* Skills */
+
+.skill-link {
+    color: var(--main-item-color);
+}
+
+.skill-item {
+    margin: 0.8rem 0;
+}
+
+.skill-item .progress {
+    margin-top: 0.5rem;
+    border-radius: 1px;
+}
+
+.skill-item .progress .progress-bar {
+    width: 1px;
+    background-color: var(--main-item-color);
+    -moz-transition: width 1s ease; 
+    -webkit-transition: width 1s ease; 
+    transition: width 1s ease; 
+}
+
+.skill-val {
+    font-style: normal;
+    float: right;
+}
+
+/* Contact */
+
+#contact input, textarea {
+    width: 100%;
+}
+
+#contact .btn-primary {
+    background-color: var(--main-item-color);
+    border-color: var(--main-item-color);
+    padding: .7rem 4rem;
+}
+
+#contact .btn-primary:hover {
+    color: var(--main-item-color);
+    background-color: var(--main-nav-color);
+    border-color: var(--main-nav-color);
+}
+
+.contact-info {
+    margin-bottom: 4rem;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-nav-color);
+    color: var(--main-item-color);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.contact-icon:hover {
+    color: var(--main-link-color);
+    background-color: var(--main-item-color);
+}
+
+.contact-name{
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+    letter-spacing: 2px;
+}
+
+.contact-decs{
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.contact-input {
+    margin: 10px 0 28px 0;
+    justify-content: center;
+}
+
+.contact-input input, textarea {
+    padding: 0.7rem 0 0.7rem 1rem;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+/* Dialog */
+
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    padding: 3rem;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+.dialog button {
+    margin-top: 2rem;
+    padding: 0.5rem 2rem;
+    background-color: var(--main-nav-color);
+    border-color: var(--main-nav-color);
+    color: var(--main-text-color);
+
+}
+
+.dialog button:hover {
+    color: var(--main-link-color);    
+    background-color: var(--main-item-color);
+    transition: all 0.5s ease;
+}
+
+/* Footer */
+
+.footer-container {
+    background-color: var(--main-nav-color);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer-icon i {
+    padding: 1.2rem 1rem 0 0;
+    font-size: 2rem;
+}
+
+/* Sumaho */
+
+@media all and (max-width: 480px) {
+    .sumaho{ display: block !important; }
+    .nosumaho{ display: none !important; }
+    
+    .navigation {
+        display: none;
+    }
+    .home-image {
+        background: url(/img/firstview-s.jpg) center/cover no-repeat;
+    }
+    .home-contents {
+        top: 17%;
+        left: 7%;
+        text-shadow: 3px 6px 5px rgba(192, 68, 172, 0.4);
+    }
+    .home-name {
+        font-size: 3rem;
+    }
+    .home-s {
+        margin-top: 26rem;
+        font-size: 1.5rem;
+    }
+    .home-icon {
+        text-align: center;
+    }
+    #portfolio-btns button {
+        margin: 0 1rem;
+        padding: 0.5rem 1rem;
+    }
+    #contact .btn-primary {
+        padding: 0.5rem;
+    }
+    .contact-info {
+        margin: 0;
+    }
+}
+
+@keyframes colorchange {
+    0% {
+        background-color: var(--main-bg-color);
+    }
+    100% {
+        background-color: var(--main-item-color);
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: var(--main-item-color);
+    }
+}

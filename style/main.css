@@ -75,7 +75,7 @@
 }
 
 .home-image {
-    background: url(/img/firstview.jpg) center/cover no-repeat;
+    background: url(img/firstview.jpg) center/cover no-repeat;
     width: 100%;
     height: 100%;
     /* filter: brightness(0.8) blur(1px); */
@@ -395,7 +395,7 @@
         display: none;
     }
     .home-image {
-        background: url(/img/firstview-s.jpg) center/cover no-repeat;
+        background: url(img/firstview-s.jpg) center/cover no-repeat;
     }
     .home-contents {
         top: 17%;

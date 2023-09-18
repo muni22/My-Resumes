@@ -41,6 +41,7 @@ function fitlerSelection(e) {
       }
 };
 
+// Activate Button
 const btnContainer = document.getElementById("portfolio-btns");
 const btns = btnContainer.querySelectorAll(".btn");
 
